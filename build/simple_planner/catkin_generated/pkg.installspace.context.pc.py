@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "geometry_msgs;nav_msgs;roscpp;std_msgs;tf".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lsimple_planner".split(';') if "-lsimple_planner" != "" else []
 PROJECT_NAME = "simple_planner"
-PROJECT_SPACE_DIR = "/home/studente/RP_project/catkin_ws/install"
+PROJECT_SPACE_DIR = "/home/studente/RP_project/install"
 PROJECT_VERSION = "0.0.0"

@@ -59,6 +59,11 @@ public:
 			ROS_WARN("Starting cell is an obstacle");
 		else
 			ROS_INFO("Starting cell is free, with cost: %d", cost);
+		int goal_cost = costmap_.getCost(goal_x, goal_y);
+		if(goal_cost>=255)
+			ROS_WARN("Goal cell is an obstacle");
+		else
+			ROS_INFO("Goal cell is free, with cost: %d", goal_cost);
         	ROS_INFO("Planning from (%d,%d) to (%d,%d)", start_x, start_y, goal_x, goal_y);
 
         	Planner planner(costmap_);

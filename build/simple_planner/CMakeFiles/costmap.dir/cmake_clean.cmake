@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/studente/catkin_ws/devel/lib/libcostmap.pdb"
-  "/home/studente/catkin_ws/devel/lib/libcostmap.so"
+  "/home/studente/RP_project/devel/lib/libcostmap.pdb"
+  "/home/studente/RP_project/devel/lib/libcostmap.so"
   "CMakeFiles/costmap.dir/src/costmap.cpp.o"
 )
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/studente/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/studente/RP_project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/studente/catkin_ws/build
+CMAKE_BINARY_DIR = /home/studente/RP_project/build
 
 # Utility rule file for actionlib_generate_messages_eus.
 
@@ -63,10 +63,10 @@ simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/build: actionlib_g
 .PHONY : simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/build
 
 simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/clean:
-	cd /home/studente/catkin_ws/build/simple_planner && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/studente/RP_project/build/simple_planner && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/clean
 
 simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/depend:
-	cd /home/studente/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/studente/catkin_ws/src /home/studente/catkin_ws/src/simple_planner /home/studente/catkin_ws/build /home/studente/catkin_ws/build/simple_planner /home/studente/catkin_ws/build/simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/studente/RP_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/studente/RP_project/src /home/studente/RP_project/src/simple_planner /home/studente/RP_project/build /home/studente/RP_project/build/simple_planner /home/studente/RP_project/build/simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : simple_planner/CMakeFiles/actionlib_generate_messages_eus.dir/depend
 

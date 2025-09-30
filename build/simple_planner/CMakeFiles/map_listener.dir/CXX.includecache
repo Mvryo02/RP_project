@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/studente/catkin_ws/src/simple_planner/src/map_listener.cpp
+/home/studente/RP_project/src/simple_planner/src/map_listener.cpp
 ros/ros.h
 -
 nav_msgs/OccupancyGrid.h

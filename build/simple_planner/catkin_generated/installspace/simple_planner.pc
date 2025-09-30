@@ -1,4 +1,4 @@
-prefix=/home/studente/RP_project/catkin_ws/install
+prefix=/home/studente/RP_project/install
 
 Name: simple_planner
 Description: Description of simple_planner

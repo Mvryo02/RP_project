@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/studente/catkin_ws/devel/lib/libplanner.pdb"
-  "/home/studente/catkin_ws/devel/lib/libplanner.so"
+  "/home/studente/RP_project/devel/lib/libplanner.pdb"
+  "/home/studente/RP_project/devel/lib/libplanner.so"
   "CMakeFiles/planner.dir/src/planner.cpp.o"
 )
 

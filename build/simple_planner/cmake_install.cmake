@@ -1,8 +1,8 @@
-# Install script for directory: /home/studente/catkin_ws/src/simple_planner
+# Install script for directory: /home/studente/RP_project/src/simple_planner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/studente/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/studente/RP_project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/studente/catkin_ws/build/simple_planner/catkin_generated/installspace/simple_planner.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/studente/RP_project/build/simple_planner/catkin_generated/installspace/simple_planner.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_planner/cmake" TYPE FILE FILES
-    "/home/studente/catkin_ws/build/simple_planner/catkin_generated/installspace/simple_plannerConfig.cmake"
-    "/home/studente/catkin_ws/build/simple_planner/catkin_generated/installspace/simple_plannerConfig-version.cmake"
+    "/home/studente/RP_project/build/simple_planner/catkin_generated/installspace/simple_plannerConfig.cmake"
+    "/home/studente/RP_project/build/simple_planner/catkin_generated/installspace/simple_plannerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_planner" TYPE FILE FILES "/home/studente/catkin_ws/src/simple_planner/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simple_planner" TYPE FILE FILES "/home/studente/RP_project/src/simple_planner/package.xml")
 endif()
 

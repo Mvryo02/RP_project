@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/studente/catkin_ws/devel/lib/simple_planner/path_publisher"
-  "/home/studente/catkin_ws/devel/lib/simple_planner/path_publisher.pdb"
+  "/home/studente/RP_project/devel/lib/simple_planner/path_publisher"
+  "/home/studente/RP_project/devel/lib/simple_planner/path_publisher.pdb"
   "CMakeFiles/path_publisher.dir/src/path_publisher.cpp.o"
 )
 

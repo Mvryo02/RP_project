@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/studente/catkin_ws/devel/lib/simple_planner/map_listener"
-  "/home/studente/catkin_ws/devel/lib/simple_planner/map_listener.pdb"
+  "/home/studente/RP_project/devel/lib/simple_planner/map_listener"
+  "/home/studente/RP_project/devel/lib/simple_planner/map_listener.pdb"
   "CMakeFiles/map_listener.dir/src/map_listener.cpp.o"
 )
 

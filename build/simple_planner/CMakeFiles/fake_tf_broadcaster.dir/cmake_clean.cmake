@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/studente/catkin_ws/devel/lib/simple_planner/fake_tf_broadcaster"
-  "/home/studente/catkin_ws/devel/lib/simple_planner/fake_tf_broadcaster.pdb"
+  "/home/studente/RP_project/devel/lib/simple_planner/fake_tf_broadcaster"
+  "/home/studente/RP_project/devel/lib/simple_planner/fake_tf_broadcaster.pdb"
   "CMakeFiles/fake_tf_broadcaster.dir/src/fake_tf_broadcaster.cpp.o"
 )
 

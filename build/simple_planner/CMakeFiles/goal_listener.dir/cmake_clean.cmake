@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/studente/catkin_ws/devel/lib/simple_planner/goal_listener"
-  "/home/studente/catkin_ws/devel/lib/simple_planner/goal_listener.pdb"
+  "/home/studente/RP_project/devel/lib/simple_planner/goal_listener"
+  "/home/studente/RP_project/devel/lib/simple_planner/goal_listener.pdb"
   "CMakeFiles/goal_listener.dir/src/goal_listener.cpp.o"
 )
 

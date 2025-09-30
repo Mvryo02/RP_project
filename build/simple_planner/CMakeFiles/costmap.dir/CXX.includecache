@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/studente/catkin_ws/src/simple_planner/include/simple_planner/costmap.hpp
+/home/studente/RP_project/src/simple_planner/include/simple_planner/costmap.hpp
 vector
 -
 nav_msgs/OccupancyGrid.h
 -
 
-/home/studente/catkin_ws/src/simple_planner/src/costmap.cpp
+/home/studente/RP_project/src/simple_planner/src/costmap.cpp
 simple_planner/costmap.hpp
-/home/studente/catkin_ws/src/simple_planner/src/simple_planner/costmap.hpp
+/home/studente/RP_project/src/simple_planner/src/simple_planner/costmap.hpp
 iostream
 -
 queue

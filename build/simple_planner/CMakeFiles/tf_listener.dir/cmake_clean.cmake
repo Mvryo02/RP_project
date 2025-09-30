@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/studente/catkin_ws/devel/lib/simple_planner/tf_listener"
-  "/home/studente/catkin_ws/devel/lib/simple_planner/tf_listener.pdb"
+  "/home/studente/RP_project/devel/lib/simple_planner/tf_listener"
+  "/home/studente/RP_project/devel/lib/simple_planner/tf_listener.pdb"
   "CMakeFiles/tf_listener.dir/src/tf_listener.cpp.o"
 )
 

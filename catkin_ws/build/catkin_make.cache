@@ -1,2 +1,0 @@
-simple_planner
--DCATKIN_DEVEL_PREFIX=/home/studente/RP_project/devel -DCMAKE_INSTALL_PREFIX=/home/studente/RP_project/install -G Unix Makefiles

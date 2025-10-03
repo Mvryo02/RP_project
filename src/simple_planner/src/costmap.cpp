@@ -63,7 +63,7 @@ void Costmap::computeDistanceCosts() {
             int ny = cy + dy[k];
             if (nx < 0 || nx >= width_ || ny < 0 || ny >= height_) continue;
             int nidx = width_*ny+nx;
-            if (dist[nidx] == -1 && data_[nidx] != 255 && data_[nidx] != 128) {
+            if (dist[nidx] == -1 && data_[nidx] != 255) {
                 dist[nidx] = dist[cidx] + 1;
                 q.push({nx, ny});
             }

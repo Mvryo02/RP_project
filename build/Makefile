@@ -428,19 +428,6 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named path_publisher
-
-# Build rule for target.
-path_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 path_publisher
-.PHONY : path_publisher
-
-# fast build rule for target.
-path_publisher/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/path_publisher.dir/build.make simple_planner/CMakeFiles/path_publisher.dir/build
-.PHONY : path_publisher/fast
-
-#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -569,6 +556,19 @@ tf2_msgs_generate_messages_cpp: cmake_check_build_system
 tf2_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f simple_planner/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make simple_planner/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_lisp
@@ -818,19 +818,6 @@ tf_generate_messages_lisp/fast:
 .PHONY : tf_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named test_costmap
-
-# Build rule for target.
-test_costmap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_costmap
-.PHONY : test_costmap
-
-# fast build rule for target.
-test_costmap/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/test_costmap.dir/build.make simple_planner/CMakeFiles/test_costmap.dir/build
-.PHONY : test_costmap/fast
-
-#=============================================================================
 # Target rules for targets named tf_generate_messages_nodejs
 
 # Build rule for target.
@@ -909,19 +896,6 @@ planner/fast:
 .PHONY : planner/fast
 
 #=============================================================================
-# Target rules for targets named tf_listener
-
-# Build rule for target.
-tf_listener: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_listener
-.PHONY : tf_listener
-
-# fast build rule for target.
-tf_listener/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/tf_listener.dir/build.make simple_planner/CMakeFiles/tf_listener.dir/build
-.PHONY : tf_listener/fast
-
-#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -946,19 +920,6 @@ actionlib_generate_messages_nodejs: cmake_check_build_system
 actionlib_generate_messages_nodejs/fast:
 	$(MAKE) -f simple_planner/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make simple_planner/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named costmap
-
-# Build rule for target.
-costmap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 costmap
-.PHONY : costmap
-
-# fast build rule for target.
-costmap/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/build
-.PHONY : costmap/fast
 
 #=============================================================================
 # Target rules for targets named planner_node
@@ -1000,56 +961,17 @@ tf2_msgs_generate_messages_nodejs/fast:
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named map_listener
+# Target rules for targets named costmap
 
 # Build rule for target.
-map_listener: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 map_listener
-.PHONY : map_listener
+costmap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 costmap
+.PHONY : costmap
 
 # fast build rule for target.
-map_listener/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/map_listener.dir/build.make simple_planner/CMakeFiles/map_listener.dir/build
-.PHONY : map_listener/fast
-
-#=============================================================================
-# Target rules for targets named goal_listener
-
-# Build rule for target.
-goal_listener: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 goal_listener
-.PHONY : goal_listener
-
-# fast build rule for target.
-goal_listener/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/goal_listener.dir/build.make simple_planner/CMakeFiles/goal_listener.dir/build
-.PHONY : goal_listener/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_nodejs
-
-# Build rule for target.
-roscpp_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named fake_tf_broadcaster
-
-# Build rule for target.
-fake_tf_broadcaster: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fake_tf_broadcaster
-.PHONY : fake_tf_broadcaster
-
-# fast build rule for target.
-fake_tf_broadcaster/fast:
-	$(MAKE) -f simple_planner/CMakeFiles/fake_tf_broadcaster.dir/build.make simple_planner/CMakeFiles/fake_tf_broadcaster.dir/build
-.PHONY : fake_tf_broadcaster/fast
+costmap/fast:
+	$(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/build
+.PHONY : costmap/fast
 
 # Help Target
 help:
@@ -1084,7 +1006,6 @@ help:
 	@echo "... actionlib_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... path_publisher"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_lisp"
@@ -1095,6 +1016,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_py"
@@ -1114,24 +1036,18 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_lisp"
-	@echo "... test_costmap"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... planner"
-	@echo "... tf_listener"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... costmap"
 	@echo "... planner_node"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... map_listener"
-	@echo "... goal_listener"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... fake_tf_broadcaster"
+	@echo "... costmap"
 .PHONY : help
 
 

@@ -68,16 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -88,17 +78,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -112,6 +91,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -122,6 +112,16 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -333,21 +333,6 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-simple_planner/CMakeFiles/path_publisher.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/path_publisher.dir/rule
-.PHONY : simple_planner/CMakeFiles/path_publisher.dir/rule
-
-# Convenience name for target.
-path_publisher: simple_planner/CMakeFiles/path_publisher.dir/rule
-
-.PHONY : path_publisher
-
-# fast build rule for target.
-path_publisher/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/path_publisher.dir/build.make simple_planner/CMakeFiles/path_publisher.dir/build
-.PHONY : path_publisher/fast
-
-# Convenience name for target.
 simple_planner/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : simple_planner/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
@@ -496,6 +481,21 @@ tf2_msgs_generate_messages_cpp: simple_planner/CMakeFiles/tf2_msgs_generate_mess
 tf2_msgs_generate_messages_cpp/fast:
 	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make simple_planner/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 simple_planner/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
@@ -783,21 +783,6 @@ tf_generate_messages_lisp/fast:
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
-simple_planner/CMakeFiles/test_costmap.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/test_costmap.dir/rule
-.PHONY : simple_planner/CMakeFiles/test_costmap.dir/rule
-
-# Convenience name for target.
-test_costmap: simple_planner/CMakeFiles/test_costmap.dir/rule
-
-.PHONY : test_costmap
-
-# fast build rule for target.
-test_costmap/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/test_costmap.dir/build.make simple_planner/CMakeFiles/test_costmap.dir/build
-.PHONY : test_costmap/fast
-
-# Convenience name for target.
 simple_planner/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
 	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : simple_planner/CMakeFiles/tf_generate_messages_nodejs.dir/rule
@@ -888,21 +873,6 @@ planner/fast:
 .PHONY : planner/fast
 
 # Convenience name for target.
-simple_planner/CMakeFiles/tf_listener.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/tf_listener.dir/rule
-.PHONY : simple_planner/CMakeFiles/tf_listener.dir/rule
-
-# Convenience name for target.
-tf_listener: simple_planner/CMakeFiles/tf_listener.dir/rule
-
-.PHONY : tf_listener
-
-# fast build rule for target.
-tf_listener/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/tf_listener.dir/build.make simple_planner/CMakeFiles/tf_listener.dir/build
-.PHONY : tf_listener/fast
-
-# Convenience name for target.
 simple_planner/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : simple_planner/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
@@ -931,21 +901,6 @@ actionlib_generate_messages_nodejs: simple_planner/CMakeFiles/actionlib_generate
 actionlib_generate_messages_nodejs/fast:
 	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make simple_planner/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
-
-# Convenience name for target.
-simple_planner/CMakeFiles/costmap.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/costmap.dir/rule
-.PHONY : simple_planner/CMakeFiles/costmap.dir/rule
-
-# Convenience name for target.
-costmap: simple_planner/CMakeFiles/costmap.dir/rule
-
-.PHONY : costmap
-
-# fast build rule for target.
-costmap/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/build
-.PHONY : costmap/fast
 
 # Convenience name for target.
 simple_planner/CMakeFiles/planner_node.dir/rule:
@@ -993,64 +948,19 @@ tf2_msgs_generate_messages_nodejs/fast:
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-simple_planner/CMakeFiles/map_listener.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/map_listener.dir/rule
-.PHONY : simple_planner/CMakeFiles/map_listener.dir/rule
+simple_planner/CMakeFiles/costmap.dir/rule:
+	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/costmap.dir/rule
+.PHONY : simple_planner/CMakeFiles/costmap.dir/rule
 
 # Convenience name for target.
-map_listener: simple_planner/CMakeFiles/map_listener.dir/rule
+costmap: simple_planner/CMakeFiles/costmap.dir/rule
 
-.PHONY : map_listener
+.PHONY : costmap
 
 # fast build rule for target.
-map_listener/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/map_listener.dir/build.make simple_planner/CMakeFiles/map_listener.dir/build
-.PHONY : map_listener/fast
-
-# Convenience name for target.
-simple_planner/CMakeFiles/goal_listener.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/goal_listener.dir/rule
-.PHONY : simple_planner/CMakeFiles/goal_listener.dir/rule
-
-# Convenience name for target.
-goal_listener: simple_planner/CMakeFiles/goal_listener.dir/rule
-
-.PHONY : goal_listener
-
-# fast build rule for target.
-goal_listener/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/goal_listener.dir/build.make simple_planner/CMakeFiles/goal_listener.dir/build
-.PHONY : goal_listener/fast
-
-# Convenience name for target.
-simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make simple_planner/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-simple_planner/CMakeFiles/fake_tf_broadcaster.dir/rule:
-	cd /home/studente/RP_project/build && $(MAKE) -f CMakeFiles/Makefile2 simple_planner/CMakeFiles/fake_tf_broadcaster.dir/rule
-.PHONY : simple_planner/CMakeFiles/fake_tf_broadcaster.dir/rule
-
-# Convenience name for target.
-fake_tf_broadcaster: simple_planner/CMakeFiles/fake_tf_broadcaster.dir/rule
-
-.PHONY : fake_tf_broadcaster
-
-# fast build rule for target.
-fake_tf_broadcaster/fast:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/fake_tf_broadcaster.dir/build.make simple_planner/CMakeFiles/fake_tf_broadcaster.dir/build
-.PHONY : fake_tf_broadcaster/fast
+costmap/fast:
+	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/build
+.PHONY : costmap/fast
 
 src/costmap.o: src/costmap.cpp.o
 
@@ -1058,8 +968,8 @@ src/costmap.o: src/costmap.cpp.o
 
 # target to build an object file
 src/costmap.cpp.o:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/src/costmap.cpp.o
 	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/planner_node.dir/build.make simple_planner/CMakeFiles/planner_node.dir/src/costmap.cpp.o
+	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/src/costmap.cpp.o
 .PHONY : src/costmap.cpp.o
 
 src/costmap.i: src/costmap.cpp.i
@@ -1068,8 +978,8 @@ src/costmap.i: src/costmap.cpp.i
 
 # target to preprocess a source file
 src/costmap.cpp.i:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/src/costmap.cpp.i
 	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/planner_node.dir/build.make simple_planner/CMakeFiles/planner_node.dir/src/costmap.cpp.i
+	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/src/costmap.cpp.i
 .PHONY : src/costmap.cpp.i
 
 src/costmap.s: src/costmap.cpp.s
@@ -1078,117 +988,9 @@ src/costmap.s: src/costmap.cpp.s
 
 # target to generate assembly for a file
 src/costmap.cpp.s:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/src/costmap.cpp.s
 	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/planner_node.dir/build.make simple_planner/CMakeFiles/planner_node.dir/src/costmap.cpp.s
+	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/costmap.dir/build.make simple_planner/CMakeFiles/costmap.dir/src/costmap.cpp.s
 .PHONY : src/costmap.cpp.s
-
-src/fake_tf_broadcaster.o: src/fake_tf_broadcaster.cpp.o
-
-.PHONY : src/fake_tf_broadcaster.o
-
-# target to build an object file
-src/fake_tf_broadcaster.cpp.o:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/fake_tf_broadcaster.dir/build.make simple_planner/CMakeFiles/fake_tf_broadcaster.dir/src/fake_tf_broadcaster.cpp.o
-.PHONY : src/fake_tf_broadcaster.cpp.o
-
-src/fake_tf_broadcaster.i: src/fake_tf_broadcaster.cpp.i
-
-.PHONY : src/fake_tf_broadcaster.i
-
-# target to preprocess a source file
-src/fake_tf_broadcaster.cpp.i:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/fake_tf_broadcaster.dir/build.make simple_planner/CMakeFiles/fake_tf_broadcaster.dir/src/fake_tf_broadcaster.cpp.i
-.PHONY : src/fake_tf_broadcaster.cpp.i
-
-src/fake_tf_broadcaster.s: src/fake_tf_broadcaster.cpp.s
-
-.PHONY : src/fake_tf_broadcaster.s
-
-# target to generate assembly for a file
-src/fake_tf_broadcaster.cpp.s:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/fake_tf_broadcaster.dir/build.make simple_planner/CMakeFiles/fake_tf_broadcaster.dir/src/fake_tf_broadcaster.cpp.s
-.PHONY : src/fake_tf_broadcaster.cpp.s
-
-src/goal_listener.o: src/goal_listener.cpp.o
-
-.PHONY : src/goal_listener.o
-
-# target to build an object file
-src/goal_listener.cpp.o:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/goal_listener.dir/build.make simple_planner/CMakeFiles/goal_listener.dir/src/goal_listener.cpp.o
-.PHONY : src/goal_listener.cpp.o
-
-src/goal_listener.i: src/goal_listener.cpp.i
-
-.PHONY : src/goal_listener.i
-
-# target to preprocess a source file
-src/goal_listener.cpp.i:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/goal_listener.dir/build.make simple_planner/CMakeFiles/goal_listener.dir/src/goal_listener.cpp.i
-.PHONY : src/goal_listener.cpp.i
-
-src/goal_listener.s: src/goal_listener.cpp.s
-
-.PHONY : src/goal_listener.s
-
-# target to generate assembly for a file
-src/goal_listener.cpp.s:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/goal_listener.dir/build.make simple_planner/CMakeFiles/goal_listener.dir/src/goal_listener.cpp.s
-.PHONY : src/goal_listener.cpp.s
-
-src/map_listener.o: src/map_listener.cpp.o
-
-.PHONY : src/map_listener.o
-
-# target to build an object file
-src/map_listener.cpp.o:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/map_listener.dir/build.make simple_planner/CMakeFiles/map_listener.dir/src/map_listener.cpp.o
-.PHONY : src/map_listener.cpp.o
-
-src/map_listener.i: src/map_listener.cpp.i
-
-.PHONY : src/map_listener.i
-
-# target to preprocess a source file
-src/map_listener.cpp.i:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/map_listener.dir/build.make simple_planner/CMakeFiles/map_listener.dir/src/map_listener.cpp.i
-.PHONY : src/map_listener.cpp.i
-
-src/map_listener.s: src/map_listener.cpp.s
-
-.PHONY : src/map_listener.s
-
-# target to generate assembly for a file
-src/map_listener.cpp.s:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/map_listener.dir/build.make simple_planner/CMakeFiles/map_listener.dir/src/map_listener.cpp.s
-.PHONY : src/map_listener.cpp.s
-
-src/path_publisher.o: src/path_publisher.cpp.o
-
-.PHONY : src/path_publisher.o
-
-# target to build an object file
-src/path_publisher.cpp.o:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/path_publisher.dir/build.make simple_planner/CMakeFiles/path_publisher.dir/src/path_publisher.cpp.o
-.PHONY : src/path_publisher.cpp.o
-
-src/path_publisher.i: src/path_publisher.cpp.i
-
-.PHONY : src/path_publisher.i
-
-# target to preprocess a source file
-src/path_publisher.cpp.i:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/path_publisher.dir/build.make simple_planner/CMakeFiles/path_publisher.dir/src/path_publisher.cpp.i
-.PHONY : src/path_publisher.cpp.i
-
-src/path_publisher.s: src/path_publisher.cpp.s
-
-.PHONY : src/path_publisher.s
-
-# target to generate assembly for a file
-src/path_publisher.cpp.s:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/path_publisher.dir/build.make simple_planner/CMakeFiles/path_publisher.dir/src/path_publisher.cpp.s
-.PHONY : src/path_publisher.cpp.s
 
 src/planner.o: src/planner.cpp.o
 
@@ -1247,60 +1049,6 @@ src/planner_node.cpp.s:
 	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/planner_node.dir/build.make simple_planner/CMakeFiles/planner_node.dir/src/planner_node.cpp.s
 .PHONY : src/planner_node.cpp.s
 
-src/test_costmap.o: src/test_costmap.cpp.o
-
-.PHONY : src/test_costmap.o
-
-# target to build an object file
-src/test_costmap.cpp.o:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/test_costmap.dir/build.make simple_planner/CMakeFiles/test_costmap.dir/src/test_costmap.cpp.o
-.PHONY : src/test_costmap.cpp.o
-
-src/test_costmap.i: src/test_costmap.cpp.i
-
-.PHONY : src/test_costmap.i
-
-# target to preprocess a source file
-src/test_costmap.cpp.i:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/test_costmap.dir/build.make simple_planner/CMakeFiles/test_costmap.dir/src/test_costmap.cpp.i
-.PHONY : src/test_costmap.cpp.i
-
-src/test_costmap.s: src/test_costmap.cpp.s
-
-.PHONY : src/test_costmap.s
-
-# target to generate assembly for a file
-src/test_costmap.cpp.s:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/test_costmap.dir/build.make simple_planner/CMakeFiles/test_costmap.dir/src/test_costmap.cpp.s
-.PHONY : src/test_costmap.cpp.s
-
-src/tf_listener.o: src/tf_listener.cpp.o
-
-.PHONY : src/tf_listener.o
-
-# target to build an object file
-src/tf_listener.cpp.o:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/tf_listener.dir/build.make simple_planner/CMakeFiles/tf_listener.dir/src/tf_listener.cpp.o
-.PHONY : src/tf_listener.cpp.o
-
-src/tf_listener.i: src/tf_listener.cpp.i
-
-.PHONY : src/tf_listener.i
-
-# target to preprocess a source file
-src/tf_listener.cpp.i:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/tf_listener.dir/build.make simple_planner/CMakeFiles/tf_listener.dir/src/tf_listener.cpp.i
-.PHONY : src/tf_listener.cpp.i
-
-src/tf_listener.s: src/tf_listener.cpp.s
-
-.PHONY : src/tf_listener.s
-
-# target to generate assembly for a file
-src/tf_listener.cpp.s:
-	cd /home/studente/RP_project/build && $(MAKE) -f simple_planner/CMakeFiles/tf_listener.dir/build.make simple_planner/CMakeFiles/tf_listener.dir/src/tf_listener.cpp.s
-.PHONY : src/tf_listener.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1308,9 +1056,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_cpp"
@@ -1318,12 +1063,12 @@ help:
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... rebuild_cache"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... install/local"
 	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... path_publisher"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_lisp"
@@ -1334,6 +1079,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_py"
@@ -1353,7 +1100,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_lisp"
-	@echo "... test_costmap"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_cpp"
@@ -1361,45 +1107,23 @@ help:
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... planner"
 	@echo "... edit_cache"
-	@echo "... tf_listener"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... install"
-	@echo "... costmap"
 	@echo "... planner_node"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... map_listener"
-	@echo "... goal_listener"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... fake_tf_broadcaster"
+	@echo "... list_install_components"
+	@echo "... costmap"
+	@echo "... install"
 	@echo "... src/costmap.o"
 	@echo "... src/costmap.i"
 	@echo "... src/costmap.s"
-	@echo "... src/fake_tf_broadcaster.o"
-	@echo "... src/fake_tf_broadcaster.i"
-	@echo "... src/fake_tf_broadcaster.s"
-	@echo "... src/goal_listener.o"
-	@echo "... src/goal_listener.i"
-	@echo "... src/goal_listener.s"
-	@echo "... src/map_listener.o"
-	@echo "... src/map_listener.i"
-	@echo "... src/map_listener.s"
-	@echo "... src/path_publisher.o"
-	@echo "... src/path_publisher.i"
-	@echo "... src/path_publisher.s"
 	@echo "... src/planner.o"
 	@echo "... src/planner.i"
 	@echo "... src/planner.s"
 	@echo "... src/planner_node.o"
 	@echo "... src/planner_node.i"
 	@echo "... src/planner_node.s"
-	@echo "... src/test_costmap.o"
-	@echo "... src/test_costmap.i"
-	@echo "... src/test_costmap.s"
-	@echo "... src/tf_listener.o"
-	@echo "... src/tf_listener.i"
-	@echo "... src/tf_listener.s"
 .PHONY : help
 
 
